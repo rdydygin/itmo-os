@@ -1,3 +1,6 @@
 **/out/*
 *.trace
 __pycache__/
+mac-check-*/
+vendor/
+results/battery-baseline
