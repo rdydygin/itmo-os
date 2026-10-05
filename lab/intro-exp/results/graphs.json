@@ -1,0 +1,22 @@
+{
+  "rand": {
+    "bytes": 10485760,
+    "nodes": 436905,
+    "record_size": 24,
+    "root": 252929,
+    "verified_nodes": 436905,
+    "same_page_edges": 5087,
+    "page_size": 16384,
+    "sha256": "c923ff7134e711d2b232f648e15b07aa69d121b2426161da124bd2fc93a4fedb"
+  },
+  "seq": {
+    "bytes": 10485760,
+    "nodes": 436905,
+    "record_size": 24,
+    "root": 0,
+    "verified_nodes": 436905,
+    "same_page_edges": 436265,
+    "page_size": 16384,
+    "sha256": "c3b1380783a3d7235f317d41ad8c962f0f2988b678be51d9dd31d3015c38575b"
+  }
+}

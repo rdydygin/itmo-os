@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-10-05T10:15:15.505553+03:00",
+  "platform": "darwin",
+  "commands": [
+    {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "returncode": 0,
+      "stdout": "Darwin Romans-MacBook-Pro.local 27.0.0 Darwin Kernel Version 27.0.0: Tue Aug 11 21:06:24 PDT 2026; root:xnu-13432.1.9~1/RELEASE_ARM64_T6030 arm64\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uptime"
+      ],
+      "returncode": 0,
+      "stdout": "10:15  up 19:11, 2 users, load averages: 1.87 2.39 2.56\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "df",
+        "-h",
+        "/Users/rmntim/Personal/ITMO/Semester5/OS-new/lab/intro-exp"
+      ],
+      "returncode": 0,
+      "stdout": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk3s5   460Gi   137Gi   299Gi    32%    1.5M  3.1G    0%   /System/Volumes/Data\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "clang",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sw_vers"
+      ],
+      "returncode": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sysctl",
+        "hw.model",
+        "hw.memsize",
+        "hw.pagesize",
+        "hw.ncpu",
+        "hw.physicalcpu",
+        "hw.logicalcpu",
+        "machdep.cpu.brand_string",
+        "hw.perflevel0.physicalcpu",
+        "hw.perflevel1.physicalcpu"
+      ],
+      "returncode": 0,
+      "stdout": "hw.model: Mac15,6\nhw.memsize: 19327352832\nhw.pagesize: 16384\nhw.ncpu: 11\nhw.physicalcpu: 11\nhw.logicalcpu: 11\nmachdep.cpu.brand_string: Apple M3 Pro\nhw.perflevel0.physicalcpu: 5\nhw.perflevel1.physicalcpu: 6\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "vm_stat"
+      ],
+      "returncode": 0,
+      "stdout": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                    28307.\nPages active:                                 376002.\nPages inactive:                               431681.\nPages speculative:                             45384.\nPages throttled:                                   0.\nPages wired down:                             144664.\nPages purgeable:                               16317.\n\"Translation faults\":                       72523912.\nPages copy-on-write:                         1761918.\nPages zero filled:                         331193804.\nPages reactivated:                           3971274.\nPages purged:                                1221169.\nFile-backed pages:                            576837.\nAnonymous pages:                              276230.\nPages stored in compressor:                   231181.\nPages occupied by compressor:                 114225.\nDecompressions:                              1842391.\nCompressions:                                3471404.\nPageins:                                     3769993.\nPageouts:                                       2085.\nSwapins:                                           0.\nSwapouts:                                          0.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "top",
+        "-l",
+        "1",
+        "-n",
+        "12",
+        "-o",
+        "cpu"
+      ],
+      "returncode": 0,
+      "stdout": "Processes: 811 total, 3 running, 808 sleeping, 3090 threads \n2026/10/05 10:15:15\nLoad Avg: 1.87, 2.39, 2.56 \nCPU usage: 3.14% user, 16.53% sys, 80.31% idle \nSharedLibs: 1026M resident, 181M data, 188M linkedit.\nMemRegions: 104313 total, 2360M resident, 514M private, 1996M shared.\nPhysMem: 16G used (2261M wired, 1785M compressor), 1148M unused.\nVM: 369T vsize, 57G framework vsize, 0(0) swapins, 0(0) swapouts.\nNetworks: packets: 5028939/5218M in, 1806981/944M out.\nDisks: 3010637/117G read, 1119707/37G written.\n\nPID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE    BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW   MSGSENT MSGRECV SYSBSD   SYSMACH CSW  PAGEINS IDLEW POWER INSTRS CYCLES JETPRI USER   #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD\n32950  top              0.0  00:00.11 1/1 0   16     4304K 0B   0B    32671 32694 running  *0[1]  0.00000 0.00000    0   1318   91    262745  131372  4238     136959  2    1       0     0.0   0      0      180    root   N/A    N/A   N/A   N/A   N/A   N/A  \n32937  mdworker_shared  0.0  00:00.08 3   1   49     3184K 0B   0B    32937 1     sleeping *0[1]  0.00000 0.00000    501 1066   98    679     307     1073     606     82   6       0     0.0   0      0      0      rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n32913  mlruntimed       0.0  00:00.06 2   1   34     2080K 0B   0B    32913 1     sleeping *0[1]  0.00000 0.00000    501 615    81    161     61      629      307     66   6       0     0.0   0      0      0      rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n32885  com.apple.iCloud 0.0  00:00.16 2   1   55     3552K 0B   0B    32885 1     sleeping *0[6]  0.00000 0.00000    501 1183   105   269     92      1485     517     168  2       0     0.0   0      0      0      rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n32875  knowledgeconstru 0.0  00:00.10 2   1   51     3856K 496K 0B    32875 1     sleeping *0[1]  0.00000 0.00000    501 1035   121   198     72      1888     498     173  76      0     0.0   0      0      0      rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n32709  biomesyncd       0.0  00:00.18 2   1   62     3088K 0B   0B    32709 1     sleeping  0[0]  0.00000 0.00000    501 927    108   324     94      2176     474     215  6       0     0.0   0      0      0      rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n32694  Python           0.0  00:00.93 1   0   15     72M   0B   0B    32671 32671 sleeping *0[1]  0.00000 0.00000    501 71831  14525 498     245     18985    3181    3334 1240    18    0.0   0      0      180    rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n32672  caffeinate       0.0  00:00.00 1   0   15     1488K 0B   0B    32671 32671 sleeping *0[1]  0.00000 0.00000    501 134    55    31      13      297      51      12   0       0     0.0   0      0      180    rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n32671  bash             0.0  00:00.01 1   0   11     1520K 0B   0B    32671 31265 sleeping *0[1]  0.00000 0.00000    501 882    207   114     51      500      275     41   4       0     0.0   0      0      180    rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n31265  zsh              0.0  00:21.08 1   0   22     7152K 0B   0B    31265 31263 sleeping *0[1]  0.00000 0.00000    501 840782 23834 2184    1085    14676745 1585    8024 6       11    0.0   0      0      180    rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n31263  login            0.0  00:00.01 2   1   30     2945K 0B   0B    31263 29669 sleeping *0[3]  0.00000 0.00000    0   1160   200   96      36      1267     328     101  1       0     0.0   0      0      180    root   N/A    N/A   N/A   N/A   N/A   N/A  \n31108  ControlCenterHel 0.0  00:00.06 3   1   150    5616K 0B   0B    31108 1     sleeping *0[36] 0.00000 0.00000    501 1624   163   729     218     2824     1710    678  28      0     0.0   0      0      0      rmntim N/A    N/A   N/A   N/A   N/A   N/A  \n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "diskutil",
+        "info",
+        "/"
+      ],
+      "returncode": 0,
+      "stdout": "   Device Identifier:         disk3s1s1\n   Device Node:               /dev/disk3s1s1\n   Whole:                     No\n   Part of Whole:             disk3\n\n   Volume Name:               Macintosh HD\n   Mounted:                   Yes\n   Mount Point:               /\n\n   Partition Type:            41504653-0000-11AA-AA11-00306543ECAC\n   File System Personality:   APFS\n   Type (Bundle):             apfs\n   Name (User Visible):       APFS\n   Owners:                    Enabled\n\n   OS Can Be Installed:       No\n   Booter Disk:               disk3s2\n   Recovery Disk:             disk3s3\n   Media Type:                Generic\n   Protocol:                  Apple Fabric\n   SMART Status:              Verified\n   Volume UUID:               1E0B924C-FA06-4DB0-A08C-AF2B3C00D68A\n   Disk / Partition UUID:     1E0B924C-FA06-4DB0-A08C-AF2B3C00D68A\n\n   Disk Size:                 494.4 GB (494384795648 Bytes) (exactly 965595304 512-Byte-Units)\n   Device Block Size:         4096 Bytes\n\n   Volume Used Space:         13.7 GB (13659725824 Bytes) (exactly 26679152 512-Byte-Units)\n   Container Total Space:     494.4 GB (494384795648 Bytes) (exactly 965595304 512-Byte-Units)\n   Container Free Space:      321.2 GB (321209057280 Bytes) (exactly 627361440 512-Byte-Units)\n   Allocation Block Size:     4096 Bytes\n\n   Media OS Use Only:         No\n   Media Read-Only:           Yes\n   Volume Read-Only:          Yes (read-only mount flag set)\n\n   Device Location:           Internal\n   Removable Media:           Fixed\n\n   Solid State:               Yes\n   Hardware AES Support:      Yes\n\n   This disk is an APFS Volume Snapshot.  APFS Information:\n   APFS Snapshot Name:        com.apple.os.update-9A91EDBD140271063B786C536C3AC26E58AD0E7C7F07601D5628E11CD66CC339\n   APFS Snapshot UUID:        1E0B924C-FA06-4DB0-A08C-AF2B3C00D68A\n   APFS Container:            disk3\n   APFS Physical Store:       disk0s2\n   APFS Volume Group:         15D34908-A717-405B-BBB7-7A55BFD5A94A\n   Encrypted:                 No\n   FileVault:                 Yes\n   Sealed:                    Yes\n   Locked:                    No\n\n   APFS Snapshots are defined upon this APFS Volume.  Snapshot list:\n   Snapshot UUID:             1E0B924C-FA06-4DB0-A08C-AF2B3C00D68A\n   Name:                      com.apple.os.update-9A91EDBD140271063B786C536C3AC26E58AD0E7C7F07601D5628E11CD66CC339\n   XID:                       31829488\n\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "system_profiler",
+        "SPNVMeDataType"
+      ],
+      "returncode": 0,
+      "stdout": "NVMExpress:\n\n    Apple SSD Controller:\n\n        APPLE SSD AP0512Z:\n\n          Capacity: 500,28 GB (500 277 792 768 bytes)\n          TRIM Support: Yes\n          Model: APPLE SSD AP0512Z\n          Revision: 591\n          Serial Number: 0ba022fbc3944a29\n          Detachable Drive: No\n          BSD Name: disk0\n          Partition Map Type: GPT (GUID Partition Table)\n          Removable Media: No\n          S.M.A.R.T. status: Verified\n          Volumes:\n            iSCPreboot:\n              Capacity: 524,3 MB (524 288 000 bytes)\n              BSD Name: disk0s1\n              Content: Apple_APFS_ISC\n            Macintosh HD:\n              Capacity: 494,38 GB (494 384 795 648 bytes)\n              BSD Name: disk0s2\n              Content: Apple_APFS\n            Recovery:\n              Capacity: 5,37 GB (5 368 664 064 bytes)\n              BSD Name: disk0s3\n              Content: Apple_APFS_Recovery\n\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pmset",
+        "-g",
+        "batt"
+      ],
+      "returncode": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=35979363)\t79%; charging; 0:57 remaining present: true\n",
+      "stderr": ""
+    }
+  ]
+}

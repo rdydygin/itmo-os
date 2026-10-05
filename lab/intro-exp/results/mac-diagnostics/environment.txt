@@ -1,0 +1,92 @@
+Mon Oct  5 10:07:26 MSK 2026
+ProductName:		macOS
+ProductVersion:		27.0.1
+BuildVersion:		26A434
+arm64
+hw.model: Mac15,6
+hw.memsize: 19327352832
+hw.pagesize: 16384
+hw.ncpu: 11
+machdep.cpu.brand_string: Apple M3 Pro
+Now drawing from 'AC Power'
+ -InternalBattery-0 (id=35979363)	71%; charging; 1:02 remaining present: true
+Battery Power:
+ Sleep On Power Button 1
+ lowpowermode         0
+ standby              1
+ ttyskeepawake        1
+ hibernatemode        3
+ powernap             1
+ hibernatefile        /var/vm/sleepimage
+ displaysleep         2
+ womp                 0
+ networkoversleep     0
+ sleep                1
+ lessbright           1
+ tcpkeepalive         1
+ disksleep            10
+AC Power:
+ Sleep On Power Button 1
+ lowpowermode         0
+ standby              1
+ ttyskeepawake        1
+ hibernatemode        3
+ powernap             1
+ hibernatefile        /var/vm/sleepimage
+ displaysleep         10
+ womp                 1
+ networkoversleep     0
+ sleep                0
+ tcpkeepalive         1
+ disksleep            10
+10:07  up 19:03, 2 users, load averages: 2.63 3.06 2.76
+Mach Virtual Memory Statistics: (page size of 16384 bytes)
+Pages free:                                    98472.
+Pages active:                                 335131.
+Pages inactive:                               418051.
+Pages speculative:                             29010.
+Pages throttled:                                   0.
+Pages wired down:                             143087.
+Pages purgeable:                               15320.
+"Translation faults":                       70647191.
+Pages copy-on-write:                         1648356.
+Pages zero filled:                         330304771.
+Pages reactivated:                           3945794.
+Pages purged:                                1220193.
+File-backed pages:                            530060.
+Anonymous pages:                              252132.
+Pages stored in compressor:                   237246.
+Pages occupied by compressor:                 116512.
+Decompressions:                              1836307.
+Compressions:                                3471404.
+Pageins:                                     3713419.
+Pageouts:                                       2085.
+Swapins:                                           0.
+Swapouts:                                          0.
+/Applications/Xcode.app/Contents/Developer
+== Standard Templates ==
+Activity Monitor
+Allocations
+Animation Hitches
+App Launch
+Audio System Trace
+CPU Counters
+CPU Profiler
+Core AI
+Data Persistence
+File Activity
+Foundation Models
+Game Memory
+Game Performance
+Game Performance Overview
+Leaks
+Logging
+Metal System Trace
+Network
+Power Profiler
+Processor Trace
+RealityKit Trace
+Swift Concurrency
+SwiftUI
+System Trace
+Time Profiler

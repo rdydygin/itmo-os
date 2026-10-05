@@ -1,0 +1,80 @@
+{
+  "monitoring": {
+    "graph_traverse": {
+      "bare": {
+        "n": 5,
+        "mean": 0.24488431664000002,
+        "std": 0.0014125058567531594,
+        "ci_low": 0.24313045897041766,
+        "ci_high": 0.24663817430958238,
+        "half": 0.0017538576695823613,
+        "relative_half": 0.007161984457178103,
+        "median": 0.24423327499999997,
+        "iqr": 0.0009922750000000424,
+        "target_n": 2
+      },
+      "time": {
+        "n": 5,
+        "mean": 0.24487416664,
+        "std": 0.0004269569170764739,
+        "ci_low": 0.24434402960728208,
+        "ci_high": 0.24540430367271793,
+        "half": 0.0005301370327179275,
+        "relative_half": 0.002164936546766506,
+        "median": 0.2448966166,
+        "iqr": 0.000366058200000019,
+        "target_n": 2
+      }
+    },
+    "graph_traverse_mmap": {
+      "bare": {
+        "n": 5,
+        "mean": 0.005175615079999999,
+        "std": 0.0001060357044626573,
+        "ci_low": 0.005043954363244544,
+        "ci_high": 0.005307275796755455,
+        "half": 0.00013166071675545577,
+        "relative_half": 0.025438660858731362,
+        "median": 0.0051401668,
+        "iqr": 0.00012771660000000015,
+        "target_n": 2
+      },
+      "time": {
+        "n": 5,
+        "mean": 0.00532211668,
+        "std": 3.189346353270513e-05,
+        "ci_low": 0.005282515714553415,
+        "ci_high": 0.005361717645446584,
+        "half": 3.9600965446584596e-05,
+        "relative_half": 0.007440829998222548,
+        "median": 0.0053067999999999995,
+        "iqr": 4.829159999999999e-05,
+        "target_n": 2
+      }
+    }
+  },
+  "cpu_noise": {
+    "timestamp": "2026-10-05T10:15:31.943834+03:00",
+    "phase": "cpu-noise",
+    "app": "graph_traverse",
+    "mode": "read",
+    "run_id": "1",
+    "order": "1",
+    "graph": "graph-rand.bin",
+    "cache": "warm",
+    "iterations": "5",
+    "cpu_affinity": "uncontrolled",
+    "wall_s": "1.245058125",
+    "user_s": "0.2259949999999975",
+    "sys_s": "1.0172449999999742",
+    "vol_ctx": "0",
+    "invol_ctx": "6",
+    "minflt": "340",
+    "majflt": "1",
+    "inblock": "0",
+    "oublock": "0",
+    "returncode": "0",
+    "command": "[\"/Users/rmntim/Personal/ITMO/Semester5/OS-new/lab/intro-exp/out/graph_traverse\", \"5\", \"/Users/rmntim/Personal/ITMO/Semester5/OS-new/lab/intro-exp/out/graph-rand.bin\"]",
+    "wall_per_traversal_s": 0.249011625
+  }
+}

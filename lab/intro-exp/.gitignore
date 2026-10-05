@@ -1,1 +1,3 @@
 **/out/*
+*.trace
+__pycache__/

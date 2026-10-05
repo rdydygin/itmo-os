@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Users/rmntim/Personal/ITMO/Semester5/OS-new/lab/intro-exp/out/venv/bin/python",
+    "../util/graphgen.py",
+    "-s",
+    "10M",
+    "--seed",
+    "427",
+    "--topology",
+    "sequential",
+    "-b",
+    "0.5",
+    "--min-step-pages",
+    "2",
+    "--page-size",
+    "16384",
+    "--verify",
+    "-o",
+    "out/graph-seq.bin"
+  ],
+  "returncode": 0,
+  "stdout": "Файл записан: out/graph-seq.bin\n  размер файла:        10485760 байт (запрошено: 10485760)\n  число вершин:        436905\n  размер записи:       24 байт\n  fan_out:             1\n  page_size:           16384\n  min_step_nodes:      1366 (~32784 байт)\n  root_index:          0  (offset=40)\n  рёбер всего:         436904\n  доля вперёд/назад:   1.000 / 0.000 (запрошено backprob=0.5)\n  доля 'коротких' переходов (< min_step_nodes): 0.000\nПроверка:\n  достижимо из корня:  436905/436905 (100.00%)\n  макс. глубина BFS:   436904\n  граф ацикличен:      True\n\n/* ------------------------------------------------------------------------\n * Автоматически сгенерировано graphgen.py для текущих параметров:\n *   size=10M  fanout=1  backprob=0.5\n *   page_size=16384  min_step_pages=2.0\n *   seed=427\n *\n *   node_count      = 436905\n *   record_size     = 24 байт\n *   min_step_nodes  = 1366 (~32784 байт)\n *\n *   ВНИМАНИЕ: page_size/backprob/seed/min_step_nodes НЕ хранятся в самом\n *   файле (сознательно, чтобы читающая программа не могла подстроиться\n *   под гиперпараметры генерации) — они есть только здесь, в этом\n *   сгенерированном для СБОРКИ снипете, и в консольном выводе генератора.\n * ------------------------------------------------------------------------ */\n#include <stdint.h>\n#include <stddef.h>\n\n#define GCACHEG_MAGIC        \"GCACHEG1\"   /* 8 байт, без завершающего нуля  */\n#define GCACHEG_VERSION      1u\n#define GCACHEG_FAN_OUT      1\n#define GCACHEG_NODE_COUNT   436905ULL\n#define GCACHEG_RECORD_SIZE  24u\n#define GCACHEG_SENTINEL     0xFFFFFFFFFFFFFFFFULL  /* пустой слот children[] */\n\n#pragma pack(push, 1)\n\n/* Заголовок файла, ровно 40 байт, little-endian, без выравнивания.\n * Гиперпараметры генерации (page_size, backprob, seed, min_step_nodes)\n * в файл намеренно не пишутся. */\ntypedef struct {\n    char     magic[8];             /* \"GCACHEG1\"                      */\n    uint32_t version;\n    uint64_t node_count;\n    uint32_t record_size;          /* == sizeof(gcacheg_node_t)       */\n    uint32_t fan_out;\n    uint64_t root_index;           /* индекс стартовой вершины обхода */\n    uint32_t flags;                /* bit0: 1 = граф ацикличен (DAG)  */\n} gcacheg_header_t;\n\n/* Запись одной вершины, 24 байт. */\ntypedef struct {\n    int64_t  value;                    /* payload, можно менять при записи */\n    uint32_t degree;                   /* фактическое число детей <= fan_out */\n    uint32_t reserved;\n    uint64_t children[GCACHEG_FAN_OUT]; /* индексы; неисп. слоты = SENTINEL  */\n} gcacheg_node_t;\n\n#pragma pack(pop)\n\n_Static_assert(sizeof(gcacheg_header_t) == 40, \"header size mismatch\");\n_Static_assert(sizeof(gcacheg_node_t) == GCACHEG_RECORD_SIZE, \"record size mismatch\");\n\n/* offset(i) = header + i * record_size, O(1) доступ по индексу */\nstatic inline uint64_t gcacheg_node_offset(uint64_t index) {\n    return (uint64_t)sizeof(gcacheg_header_t) + index * (uint64_t)sizeof(gcacheg_node_t);\n}\n\n",
+  "stderr": ""
+}

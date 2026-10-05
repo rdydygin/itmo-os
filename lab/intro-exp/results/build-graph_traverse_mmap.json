@@ -1,0 +1,14 @@
+{
+  "command": [
+    "clang",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-o",
+    "out/graph_traverse_mmap",
+    "src/graph_traverse_mmap.c"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

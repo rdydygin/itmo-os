@@ -1,0 +1,332 @@
+[
+  {
+    "trace": "graph_traverse-read",
+    "iterations": 20,
+    "pid": "33714",
+    "return_exit_status": "0",
+    "recording_duration_s": 8.16382,
+    "observed_start_s": 0.658000416,
+    "observed_end_s": 8.163820028,
+    "observed_window_s": 7.505819612,
+    "observed_s_per_iteration": 0.3752909806,
+    "states_s": {
+      "Runnable": 0.000718299,
+      "Running": 7.272074672,
+      "Interrupted": 0.010727849,
+      "Blocked": 0.222290875,
+      "Preempted": 7.917e-06
+    },
+    "running_percent": 96.88581724471105,
+    "cores_running_s": {
+      "CPU 8 (P Core)": 3.045768133,
+      "CPU 9 (P Core)": 1.625715297,
+      "CPU 10 (P Core)": 2.008555788,
+      "CPU 7 (P Core)": 0.558989161,
+      "CPU 6 (P Core)": 0.033046293
+    },
+    "core_changes": 19,
+    "scheduling_events": {
+      "Runnable": 180,
+      "Running": 5923,
+      "Interrupted": 5568,
+      "Blocked": 179
+    },
+    "sample_count": 4328,
+    "sample_weight_s": 4.328,
+    "top_sample_frames": [
+      {
+        "frame": "read",
+        "weight_s": 2.465,
+        "percent": 56.9547134935305
+      },
+      {
+        "frame": "__lseek",
+        "weight_s": 1.839,
+        "percent": 42.49075785582255
+      },
+      {
+        "frame": "main",
+        "weight_s": 0.013,
+        "percent": 0.30036968576709794
+      },
+      {
+        "frame": "graph_transfer",
+        "weight_s": 0.006,
+        "percent": 0.13863216266173753
+      },
+      {
+        "frame": "DYLD-STUB$$lseek",
+        "weight_s": 0.002,
+        "percent": 0.04621072088724584
+      },
+      {
+        "frame": "lsl::Allocator::AllocationMetadata::AllocationMetadata(lsl::Allocator::AllocationMetadata*, unsigned long long, unsigned long long, unsigned long long)",
+        "weight_s": 0.001,
+        "percent": 0.02310536044362292
+      },
+      {
+        "frame": "crc32c",
+        "weight_s": 0.001,
+        "percent": 0.02310536044362292
+      },
+      {
+        "frame": "DYLD-STUB$$read",
+        "weight_s": 0.001,
+        "percent": 0.02310536044362292
+      }
+    ]
+  },
+  {
+    "trace": "graph_traverse-write",
+    "iterations": 20,
+    "pid": "33778",
+    "return_exit_status": "0",
+    "recording_duration_s": 28.555128,
+    "observed_start_s": 0.740530541,
+    "observed_end_s": 28.555128097,
+    "observed_window_s": 27.814597556,
+    "observed_s_per_iteration": 1.3907298778,
+    "states_s": {
+      "Runnable": 0.001377935,
+      "Running": 27.419831217,
+      "Interrupted": 0.033085463,
+      "Blocked": 0.359807968,
+      "Preempted": 1.8334e-05,
+      "Terminated": 0.000476639
+    },
+    "running_percent": 98.58072244904783,
+    "cores_running_s": {
+      "CPU 10 (P Core)": 5.816802291,
+      "CPU 8 (P Core)": 2.494465542,
+      "CPU 6 (P Core)": 7.336145916,
+      "CPU 9 (P Core)": 5.336171046,
+      "CPU 7 (P Core)": 6.436246422
+    },
+    "core_changes": 46,
+    "scheduling_events": {
+      "Runnable": 2749,
+      "Running": 36669,
+      "Interrupted": 28371,
+      "Wait": 784,
+      "Blocked": 2725
+    },
+    "sample_count": 19822,
+    "sample_weight_s": 19.822,
+    "top_sample_frames": [
+      {
+        "frame": "write",
+        "weight_s": 10.276,
+        "percent": 51.84138835637171
+      },
+      {
+        "frame": "__lseek",
+        "weight_s": 5.561,
+        "percent": 28.05468671173444
+      },
+      {
+        "frame": "read",
+        "weight_s": 3.885,
+        "percent": 19.599434971244072
+      },
+      {
+        "frame": "graph_transfer",
+        "weight_s": 0.063,
+        "percent": 0.3178286752093633
+      },
+      {
+        "frame": "main",
+        "weight_s": 0.008,
+        "percent": 0.04035919685198265
+      },
+      {
+        "frame": "DYLD-STUB$$write",
+        "weight_s": 0.008,
+        "percent": 0.04035919685198265
+      },
+      {
+        "frame": "DYLD-STUB$$lseek",
+        "weight_s": 0.008,
+        "percent": 0.04035919685198265
+      },
+      {
+        "frame": "DYLD-STUB$$read",
+        "weight_s": 0.005,
+        "percent": 0.02522449803248915
+      },
+      {
+        "frame": "close",
+        "weight_s": 0.005,
+        "percent": 0.02522449803248915
+      },
+      {
+        "frame": "mach_o::ChainedFixups::forEachBindTarget(void (mach_o::Fixup::BindTarget const&, bool&) block_pointer, mach_o::Error*) const",
+        "weight_s": 0.001,
+        "percent": 0.005044899606497831
+      },
+      {
+        "frame": "access",
+        "weight_s": 0.001,
+        "percent": 0.005044899606497831
+      },
+      {
+        "frame": "__open",
+        "weight_s": 0.001,
+        "percent": 0.005044899606497831
+      }
+    ]
+  },
+  {
+    "trace": "graph_traverse_mmap-read",
+    "iterations": 1000,
+    "pid": "33914",
+    "return_exit_status": "0",
+    "recording_duration_s": 5.635765,
+    "observed_start_s": 0.778984875,
+    "observed_end_s": 5.635764837,
+    "observed_window_s": 4.856779962,
+    "observed_s_per_iteration": 0.004856779962,
+    "states_s": {
+      "Runnable": 0.000228006,
+      "Running": 4.798707316,
+      "Interrupted": 0.019327265,
+      "Blocked": 0.038309288,
+      "Preempted": 1.3208e-05,
+      "Terminated": 0.000194879
+    },
+    "running_percent": 98.80429736462499,
+    "cores_running_s": {
+      "CPU 9 (P Core)": 3.126555876,
+      "CPU 7 (P Core)": 0.002047542,
+      "CPU 6 (P Core)": 1.031746527,
+      "CPU 8 (P Core)": 0.638357371
+    },
+    "core_changes": 8,
+    "scheduling_events": {
+      "Runnable": 222,
+      "Running": 7354,
+      "Interrupted": 6910,
+      "Wait": 220,
+      "Blocked": 222
+    },
+    "sample_count": 4817,
+    "sample_weight_s": 4.817,
+    "top_sample_frames": [
+      {
+        "frame": "main",
+        "weight_s": 4.772,
+        "percent": 99.06580859456093
+      },
+      {
+        "frame": "__open",
+        "weight_s": 0.019,
+        "percent": 0.3944363711853851
+      },
+      {
+        "frame": "__munmap",
+        "weight_s": 0.019,
+        "percent": 0.3944363711853851
+      },
+      {
+        "frame": "__write_nocancel",
+        "weight_s": 0.004,
+        "percent": 0.08303923603902845
+      },
+      {
+        "frame": "0x100b7c991",
+        "weight_s": 0.001,
+        "percent": 0.020759809009757112
+      },
+      {
+        "frame": "__vfprintf",
+        "weight_s": 0.001,
+        "percent": 0.020759809009757112
+      },
+      {
+        "frame": "__mmap",
+        "weight_s": 0.001,
+        "percent": 0.020759809009757112
+      }
+    ]
+  },
+  {
+    "trace": "graph_traverse_mmap-write",
+    "iterations": 1000,
+    "pid": "33946",
+    "return_exit_status": "0",
+    "recording_duration_s": 5.517006,
+    "observed_start_s": 0.633689375,
+    "observed_end_s": 5.51700592,
+    "observed_window_s": 4.883316545,
+    "observed_s_per_iteration": 0.0048833165449999995,
+    "states_s": {
+      "Runnable": 1.1124e-05,
+      "Running": 4.864444386,
+      "Interrupted": 0.016738698,
+      "Preempted": 1.3292e-05,
+      "Blocked": 0.001907083,
+      "Terminated": 0.000201962
+    },
+    "running_percent": 99.6135380775321,
+    "cores_running_s": {
+      "CPU 9 (P Core)": 2.798752452,
+      "CPU 10 (P Core)": 0.089839287,
+      "CPU 8 (P Core)": 1.975852647
+    },
+    "core_changes": 2,
+    "scheduling_events": {
+      "Runnable": 2,
+      "Running": 6913,
+      "Interrupted": 6907,
+      "Blocked": 2
+    },
+    "sample_count": 4881,
+    "sample_weight_s": 4.881,
+    "top_sample_frames": [
+      {
+        "frame": "main",
+        "weight_s": 4.813,
+        "percent": 98.60684286006965
+      },
+      {
+        "frame": "__munmap",
+        "weight_s": 0.031,
+        "percent": 0.6351157549682442
+      },
+      {
+        "frame": "__open",
+        "weight_s": 0.027,
+        "percent": 0.5531653349723417
+      },
+      {
+        "frame": "__mmap",
+        "weight_s": 0.003,
+        "percent": 0.06146281499692685
+      },
+      {
+        "frame": "close",
+        "weight_s": 0.003,
+        "percent": 0.06146281499692685
+      },
+      {
+        "frame": "0x1052066ed",
+        "weight_s": 0.001,
+        "percent": 0.02048760499897562
+      },
+      {
+        "frame": "__mprotect",
+        "weight_s": 0.001,
+        "percent": 0.02048760499897562
+      },
+      {
+        "frame": "fstat",
+        "weight_s": 0.001,
+        "percent": 0.02048760499897562
+      },
+      {
+        "frame": "0x1a124f901",
+        "weight_s": 0.001,
+        "percent": 0.02048760499897562
+      }
+    ]
+  }
+]

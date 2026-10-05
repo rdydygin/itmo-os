@@ -1,0 +1,24 @@
+{
+  "variant": "Read vs Write,Cache,10M,Rand",
+  "seed": 427,
+  "warmups_per_config": 2,
+  "pilot_n": 10,
+  "target_relative_halfwidth": 0.05,
+  "minimum_n": 30,
+  "maximum_n": 100,
+  "iterations": 5,
+  "cache": "two complete warmup traversals per config; no eviction",
+  "metric": "whole child process wall time / iterations",
+  "outliers": "keep all successful runs",
+  "core": null,
+  "build": "clang -O2 -Wall -Wextra",
+  "write_semantics": "buffered updates; no fsync or msync in Cache mode",
+  "order": "shuffle four configurations each round; seed 427",
+  "pilot_required_n": {
+    "graph_traverse/read": 30,
+    "graph_traverse/write": 30,
+    "graph_traverse_mmap/read": 30,
+    "graph_traverse_mmap/write": 30
+  },
+  "final_n": 30
+}
